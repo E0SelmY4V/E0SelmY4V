@@ -1,4 +1,4 @@
-- My name is E0SelmY4V and I don't like speaking too much because of the Chinese common saying "言多必失" - It means "talks much, errs much".
+- My name is E0SelmY4V and I don't like speaking too much because of the Chinese common saying "言多必失" - It means "more words lead to more mistakes".
 - My English is poor and I’m a Chinese, so I speak Chinese commonly.
 - The language I'm good at:
   - JavaScript
