@@ -16,7 +16,7 @@
 - The language that I don't like at all:
   - Python (We call it "屁眼通红（p y t hon）" in Chinese, which means "The particularly red ass")
   - 屁眼通红
-  - Some language named from no-leg reptilia animal
+  - Some language named from no-leg reptilian animal
 
 <!---
 E0SelmY4V/E0SelmY4V is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
