@@ -8,11 +8,10 @@
 - ## 新年快乐
 
   ```txt
-  　　人￡人＄人￥人￠人　　
+  　　人　人　人　人　人
   ＜　新年快乐～快快乐乐　＞
-  ＄　　　过　年　好　　　￥
   ＜　岁岁平安～平平安安　＞
-  　　丫＄丫￥丫￡丫￠丫　　
+  　　丫　丫　丫　丫　丫
   ```
 <!---
 E0SelmY4V/E0SelmY4V is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
