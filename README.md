@@ -5,12 +5,10 @@
   <img align="left" src="https://github-readme-stats.vercel.app/api?username=E0SelmY4V">
 
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=E0SelmY4V">
-- ## 新年快乐
-
-  ```txt
+-  ```txt
   　　人　人　人　人　人
-  -<　新年快乐～快快乐乐　>-
-  -<　岁岁平安～平平安安　>-
+  ＜　新年快乐～快快乐乐　＞
+  ＜　岁岁平安～平平安安　＞
   　　丫　丫　丫　丫　丫
   ```
 <!---
