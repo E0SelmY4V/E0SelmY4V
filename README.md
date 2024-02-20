@@ -1,7 +1,9 @@
-# 👋 这里是肉丁土豆表
+# 我是肉丁土豆表
 
 我是一个喜欢钻研技术的人。
+
 我的英文名是 **Eosellmay Li**。
+
 我喜欢写程序，但作为一个有原则的人，程序我有四不写：
 
 1. 不写 Python 程序。
@@ -9,12 +11,13 @@
 3. 不写以动物界脊索动物门脊椎动物亚门爬行纲蛇目原蛇亚目蟒科动物命名的编程语言的程序。
 4. 不写 Python 程序。
 
-[我的博客](https://www.cnblogs.com/QiFande)
+如果对我感兴趣，可以浏览[我的博客](https://www.cnblogs.com/QiFande)，或者[给我钱](https://www.cnblogs.com/QiFande/gallery/image/449853.html)。
+
 [![My GitHub stats](https://github-readme-stats.vercel.app/api?username=E0SelmY4V&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
 -----
 
-## 西瓜🍉宣言
+# 西瓜🍉宣言
 
 0. 普遍意义下，西瓜🍉应是一种被**至少一人**认定为可以被称作“**西瓜**”的**物质**存在。
 1. 西瓜🍉是**很好吃**的。
