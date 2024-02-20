@@ -10,9 +10,7 @@
 4. 不写 Python 程序。
 
 [我的博客](https://www.cnblogs.com/QiFande)
-
-​![](​https://github-readme-stats.vercel.app/api?username=E0SelmY4V​)
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=E0SelmY4V​")
+[![My GitHub stats](https://github-readme-stats.vercel.app/api?username=E0SelmY4V&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
 -----
 
