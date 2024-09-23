@@ -7,7 +7,7 @@
 3. 不写以动物界脊索动物门脊椎动物亚门爬行纲蛇目原蛇亚目蟒科动物命名的编程语言的程序。
 4. 不写 Python 程序。
 
-如果对我感兴趣，可以浏览[我的博客](https://www.cnblogs.com/QiFande)，或者[给我钱](https://www.cnblogs.com/QiFande/gallery/image/449853.html)。
+如果对我感兴趣，可以浏览[我的博客](https://www.cnblogs.com/QiFande)，或者[给我钱](https://www.cnblogs.com/QiFande/p/-/money)。
 
 [![My GitHub stats](https://github-readme-stats.vercel.app/api?username=E0SelmY4V&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
