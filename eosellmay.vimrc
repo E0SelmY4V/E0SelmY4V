@@ -316,8 +316,6 @@ function! CreateExploreMirror(dir)
     " }
 
     " from CreateExploreTree
-    setlocal bufhidden=wipe
-
     call b:NERDTree.render()
 
 	" from UI.restoreScreenState {
