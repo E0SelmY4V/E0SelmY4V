@@ -28,6 +28,7 @@ set si              " 智能缩进
 set history=500  " vim记住的历史操作的数量，默认的是20
 set autoread     " 当文件在外部被修改时，自动重新读取
 set backspace=2  " 让回车能删东西
+set fileformat=unix " 显示 ^M ，像这样：
 " let maplocalleader=';' " 修改<leader>
 " }}}
 
