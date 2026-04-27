@@ -30,6 +30,8 @@ set autoread     " 当文件在外部被修改时，自动重新读取
 set backspace=2  " 让回车能删东西
 set fileformat=unix " 显示 ^M ，像这样：
 " let maplocalleader=';' " 修改<leader>
+set conceallevel=2          " 完全启用 conceal
+set concealcursor=nc        " 光标所在行显示原字符（防止编辑时看不见）
 " }}}
 
 " 插件 {{{
@@ -482,6 +484,17 @@ au FileType markdown let b:delimitMate_nesting_quotes = ["```"]
 " 功能 {{{
 " 搜索 git 中文件的内容
 command -nargs=1 Sch noautocmd vimgrep /<args>/gj `git ls-files` | cw
+
+" 隐藏 <200b>
+autocmd BufEnter * call matchadd('Conceal', '\%u200b', 10, -1, {'conceal': ''})
+
+" 在 coc 的弹出窗口里也隐藏 <200b>
+function! s:AddedFloat() abort  
+	let bufnr = winbufnr(g:coc_last_float_win)  
+	call win_execute(g:coc_last_float_win, 'silent! keeppatterns %s/\%u200b//ge')  
+	call setbufvar(bufnr, '&modified', 0) 
+endfunction  
+autocmd User CocOpenFloat call s:AddedFloat()
 
 " 设置括号自动补齐
 " inoremap [ []<LEFT>
