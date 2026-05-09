@@ -32,6 +32,8 @@ set fileformat=unix " 显示 ^M ，像这样：
 " let maplocalleader=';' " 修改<leader>
 set conceallevel=2          " 完全启用 conceal
 set concealcursor=nc        " 光标所在行显示原字符（防止编辑时看不见）
+set smoothscroll
+set scrolloff=8
 " }}}
 
 " 插件 {{{
