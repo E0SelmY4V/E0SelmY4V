@@ -432,9 +432,17 @@ nmap <localleader>ac  <Plug>(coc-codeaction)
 nmap <localleader>fp  <Plug>(coc-fix-current)
 " Git undo
 nnoremap <localleader>ud  :<C-u>CocCommand git.chunkUndo<CR>
+
 nnoremap <localleader>ki  :<C-u>CocCommand git.keepIncoming<CR>
 nnoremap <localleader>kb  :<C-u>CocCommand git.keepBoth<CR>
 nnoremap <localleader>kc  :<C-u>CocCommand git.keepCurrent<CR>
+
+nnoremap <localleader>i  :<C-u>CocCommand git.chunkInfo<CR>
+
+nnoremap <localleader>at  :<C-u>CocCommand git.chunkStage<CR>
+nnoremap <localleader>ut  :<C-u>CocCommand git.chunkUnstage<CR>
+
+nnoremap <localleader>df  :<C-u>CocCommand git.diffCached<CR>
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
