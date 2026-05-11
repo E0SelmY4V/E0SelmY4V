@@ -629,7 +629,7 @@ command! -nargs=0 -bang VimMetaInit call Terminal_MetaMode(<bang>0)
 :VimMetaInit
 
 " 一进 vim 没有文件就打开终端，并打开文件浏览器
-autocmd VimEnter * if !argc() | call feedkeys("\<C-w>v\<M-e>20\<C-w>\<\<C-w>l\<M-q>\<C-w>k\<M-e>") | endif
+autocmd VimEnter * if !argc() | call feedkeys("\<C-w>v\<C-w>v\<M-e>\<C-w>l\<M-e>\<C-w>l\<M-e>\<C-w>h\<M-q>git status\<CR>") | endif
 
 " }}}
 
