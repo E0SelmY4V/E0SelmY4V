@@ -268,6 +268,9 @@ let g:NERDTreeGitStatusUntrackedFilesMode = 'all'
 
 let g:NERDTreeGitStatusShowClean = 1 " default: 0
 
+" 允许给相同文件打开多个 buffer
+let g:NERDTreeCustomOpenArgs = {'file': {'reuse': ''}, 'dir': {}}
+
 " 镜像 ExploreTree {{{
 
 command! -n=? -complete=dir -bar NERDTreeExploreMirror :call CreateExploreMirror('<args>')
