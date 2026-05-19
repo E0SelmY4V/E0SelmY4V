@@ -512,6 +512,11 @@ function! s:AddedFloat() abort
 endfunction  
 autocmd User CocOpenFloat call s:AddedFloat()
 
+" 将相对路径复制到系统剪贴板
+nnoremap <localleader>cr :<C-u>let @+ = expand('%:.')<CR>
+" 将完整路径复制到系统剪贴板
+nnoremap <localleader>ca :<C-u>let @+ = expand('%:p')<CR>
+
 " 设置括号自动补齐
 " inoremap [ []<LEFT>
 " inoremap { {}<LEFT>
