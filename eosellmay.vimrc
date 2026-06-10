@@ -131,12 +131,12 @@ map t <Plug>(easymotion-bd-tl)
 " nmap f <Plug>(easymotion-overwin-f)
 
 " s{char}{char} to move to {char}{char}
-nmap F <Plug>(easymotion-bd-f)
-nmap T <Plug>(easymotion-bd-t)
+nmap F <Plug>(easymotion-bd-f2)
+nmap T <Plug>(easymotion-bd-t2)
 
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <m-g> <Plug>(easymotion-bd-f2)
+" nmap <m-g> <Plug>(easymotion-bd-f2)
 " nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " Gif config
