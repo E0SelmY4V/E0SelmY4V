@@ -590,6 +590,7 @@ function! <SID>BufcloseCloseIt()
     endif
 endfunction
 
+" 开启 alt 键 {{{
 
 function! Terminal_MetaMode(mode)
     set ttimeout
@@ -636,8 +637,83 @@ command! -nargs=0 -bang VimMetaInit call Terminal_MetaMode(<bang>0)
 
 :VimMetaInit
 
+" }}}
+
 " 一进 vim 没有文件就打开终端，并打开文件浏览器
 autocmd VimEnter * if !argc() | call feedkeys("\<C-w>v\<C-w>v\<M-e>\<C-w>l\<M-e>\<C-w>l\<M-e>\<C-w>h\<M-q>git status\<CR>") | endif
+
+" UEGendb {{{
+
+" 转义 cmd 中的空格（^ 转义）
+function! s:EscapeCmdSpaces(str)
+	let l:str = substitute(a:str, '\\', '\\\\', 'g')
+	let l:str = substitute(l:str, ' ', '^ ', 'g')
+	return l:str
+endfunction
+
+" 将 WSL 路径 (/mnt/c/...) 转换为 Windows 路径 (C:\...)
+function! s:WslToWinPath(path)
+	let l:path = substitute(a:path, '/', '\', 'g')
+	if l:path =~# '^\\mnt\\[a-z]\\'
+		let l:drive = toupper(l:path[5])
+		let l:rest = strpart(l:path, 6)
+		return l:drive . ':' . l:rest
+	endif
+	return l:path
+endfunction
+
+function! s:UEGendb(target, config = 'Development', platform = 'Win64', ...)
+	let l:files = glob('*.uproject', 0, 1)
+	if empty(l:files)
+		echoerr "No .uproject file found in current directory"
+		return
+	endif
+	let l:project_file = fnamemodify(l:files[0], ':p')
+	let l:project_file = s:WslToWinPath(l:project_file)
+	let l:project_file = s:EscapeCmdSpaces(l:project_file)
+	let l:project_file = '-Project=' . l:project_file
+
+	if empty($UE_FOLDER)
+		echoerr "Environment variable UE_FOLDER is not set"
+		return
+	endif
+	let l:ue_folder = substitute($UE_FOLDER, '[\\/]$', '', '')
+	let l:build_bat = l:ue_folder . '\Engine\Build\BatchFiles\Build.bat'
+	let l:build_bat = s:WslToWinPath(l:build_bat)
+	let l:build_bat = s:EscapeCmdSpaces(l:build_bat)
+
+	if empty(a:target)
+		echoerr "No target provided"
+		return
+	endif
+
+	let l:cmd = join([
+		\ 'cmd.exe /c',
+		\ l:build_bat,
+		\ a:target,
+		\ a:platform,
+		\ a:config,
+		\ l:project_file,
+		\ '-mode=GenerateClangDatabase'
+		\ ], ' ')
+
+	if a:0 > 0
+		let l:extra = copy(a:000)
+		call map(l:extra, 's:EscapeCmdSpaces(v:val)')
+		let l:cmd .= ' ' . join(l:extra, ' ')
+	endif
+
+	execute '!' . l:cmd
+	let l:info = system('mv -f "' . l:ue_folder . '/compile_commands.json" ./')
+	if !empty(l:info)
+		echo l:info
+		return
+	endif
+endfunction
+
+command! -nargs=+ UEGendb call s:UEGendb(<f-args>)
+
+" }}}
 
 " }}}
 
